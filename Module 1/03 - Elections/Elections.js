@@ -48,13 +48,13 @@ while(votar == true){
 }
 
 var totalVotos = candidatoX + candidatoY + candidatoZ + branco + nulo;
-nulo = nulo + branco;
 
 console.log("Total de Votos " + totalVotos);
 console.log("Resultado da eleição: " +
 "\nCandidato X: " + candidatoX +
 "\nCandidato Y: " + candidatoY +
 "\nCandidato Z: " + candidatoZ +
+"\nVotos Brancos: " + branco +
 "\nVotos Nulos: " + nulo);
 
 if(candidatoX > candidatoY && candidatoX > candidatoZ){
