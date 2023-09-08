@@ -1,6 +1,6 @@
 //Código feito no Programiz
-var animais = [
-];
+
+var animais = [];
 
 // Função para mostrar informações de um animal específico
 function mostrarInformacoesAnimal(indice) {
