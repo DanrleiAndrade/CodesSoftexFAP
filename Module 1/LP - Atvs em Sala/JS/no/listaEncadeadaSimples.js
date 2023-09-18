@@ -32,6 +32,8 @@ export class ListaEncadeada{
         }
         this.contador++;
         return this.contador;
+
+        
     }
 
     addNoEm(conteudo, indice){
