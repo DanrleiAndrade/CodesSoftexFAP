@@ -1,0 +1,7 @@
+NO TERMINAL - PARA O NODE
+npm init -> para iniciar o node
+npm install prompt -> para instalar o prompt
+npm install prompt-sync -> para instalar o prompt-sync
+node .\index.js -> para rodar o código
+Não colocar, neste caso, "type": "module", antes de "dependencies"
+Colocar no index -> const prompt = require('prompt-sync')();
