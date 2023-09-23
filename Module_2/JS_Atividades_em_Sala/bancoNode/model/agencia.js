@@ -6,4 +6,5 @@ export class Agencia{
         this.email = email;
         this.endereco = endereco;
     }
+
 }
