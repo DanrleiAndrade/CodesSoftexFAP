@@ -1,5 +1,5 @@
 export class Cliente{
-    constructor(nome, cpf, dataNasc, rg, email, telefone, endereco){
+        constructor(nome, cpf, dataNasc, rg, email, telefone, endereco){
         this.nome = nome;
         this.cpf = cpf;
         this.dataNasc = dataNasc;
