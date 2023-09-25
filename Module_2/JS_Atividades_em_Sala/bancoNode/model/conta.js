@@ -11,6 +11,8 @@ export class Conta{
     #status;
     #transacoes;
 
+    static contador = 0;
+
     constructor(cliente, numero, agencia, saldo){
         this.#cliente = cliente;
         this.#numero = numero;
@@ -19,6 +21,7 @@ export class Conta{
         this.#saldo = saldo;
         this.#status = true;
         this.#transacoes = [];
+        Conta.contador++;
     }
     // depositar da conta
     depositar(valor){
@@ -41,7 +44,7 @@ export class Conta{
     transferir(valor, contaFav){
         if (this.#saldo>=valor) {
             this.#saldo -= valor;
-            contaFav.saldo += valor;
+            contaFav.#saldo += valor;
             let transFav = new Transacao(TIPOTRANS.transferencia, new Date().toLocaleDateString(), valor, this.#cliente.nome, '+');
             contaFav.transacoes.push(transFav);
             let trans = new Transacao(TIPOTRANS.transferencia, new Date().toLocaleDateString(), valor, contaFav.#cliente.nome, '-');
