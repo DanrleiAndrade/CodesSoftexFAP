@@ -4,5 +4,6 @@ export const TIPOTRANS = {
     debito: "DÉBITO",
     deposito: "DEPÓSITO",
     transferencia: "TRANSFERENCIA",
-    pagamento: "PAGAMENTO"
+    pagamento: "PAGAMENTO",
+    render: "RENDIMENTO"
 }

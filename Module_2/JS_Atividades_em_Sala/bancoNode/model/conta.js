@@ -23,6 +23,12 @@ export class Conta{
         this.#transacoes = [];
         Conta.contador++;
     }
+
+    //metodo static na classe
+    static qtdContas(){
+        return `Número de contas criadas: ${contador}`;
+    }
+
     // depositar da conta
     depositar(valor){
         this.#saldo += valor;
@@ -89,6 +95,12 @@ export class Conta{
         extrato += "\t-------------------------------------------\n";
         extrato += "\tSaldo\t\t" + this.#saldo + "\n";
         return extrato;
+    }
+
+    render(rendimento){
+        this.saldo += rendimento;
+        let trans = new Transacao(TIPOTRANS.render, new Date().toLocaleDateString(), rendimento, null, '+');
+        this.#transacoes.push(trans);
     }
 
     //GETS AND SETS
