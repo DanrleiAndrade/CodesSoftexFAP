@@ -11,10 +11,13 @@ export class Conta{
     #status;
     #transacoes;
 
-    static contador = 0;
+    static #contador = 0;
 
     constructor(cliente, numero, agencia, saldo){
-        this.#cliente = cliente;
+        if(this.constructor == Conta){
+            throw new Error("Classe não pode ser instanciada");
+        }else{
+            this.#cliente = cliente;
         this.#numero = numero;
         this.#agencia = agencia;
         this.#dataCriacao = Date.now();
@@ -22,11 +25,17 @@ export class Conta{
         this.#status = true;
         this.#transacoes = [];
         Conta.contador++;
+        }        
     }
 
     //metodo static na classe
     static qtdContas(){
-        return `Número de contas criadas: ${contador}`;
+        return `Número de contas criadas: ${this.#contador}`;
+    }
+
+    //"gambiarra" para simular método abstrato
+    mostrarCliente(){
+        throw new Error("Método abstrato");
     }
 
     // depositar da conta
@@ -100,6 +109,12 @@ export class Conta{
     render(rendimento){
         this.saldo += rendimento;
         let trans = new Transacao(TIPOTRANS.render, new Date().toLocaleDateString(), rendimento, null, '+');
+        this.#transacoes.push(trans);
+    }
+
+    cobrarTaxa(taxa){
+        this.#saldo -= taxa;
+        let trans = new Transacao(TIPOTRANS.cobrarTaxa, new Date().toLocaleDateString(), taxa, null, '-');
         this.#transacoes.push(trans);
     }
 

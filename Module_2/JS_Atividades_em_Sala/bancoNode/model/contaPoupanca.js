@@ -25,11 +25,21 @@ export class Poupanca extends Conta{
         super.render(rendimento);
     }
 
-    renderMes(){
+    /*renderMes(){
         let saldoAtual = super.saldo;
         saldoAtual += saldoAtual * this.taxaRendimento;
         let rendimento = saldoAtual - super.saldo;
         super.render(rendimento);
+    }*/
+
+    depositar(valor) {
+        valor = valor * 1.02;
+        super.depositar(valor);
+    }
+
+    //sobrescrita de método abstrato
+    mostrarCliente() {
+        return super.cliente.toString();
     }
     
 }

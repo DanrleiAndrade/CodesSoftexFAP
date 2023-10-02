@@ -10,6 +10,8 @@ import { Agencia } from './model/agencia.js';
 import { Cliente } from './model/cliente.js';
 import { Conta } from './model/conta.js';
 import { Endereco } from './model/endereco.js';
+import { Poupanca } from './model/poupanca.js';
+import { ContaCorrente } from './model/contaCorrente.js';
 
 let endAg = new Endereco("PE", "Recife", "Recife", "Rua da Guia", 1000, 305, "40545-010");
 let agencia = new Agencia("Softex", 1234, "81900001111", "agsoftex@gmail.com", endAg);
