@@ -10,7 +10,7 @@ import { Agencia } from './model/agencia.js';
 import { Cliente } from './model/cliente.js';
 import { Conta } from './model/conta.js';
 import { Endereco } from './model/endereco.js';
-import { Poupanca } from './model/poupanca.js';
+import { Poupanca } from './model/contaPoupanca.js';
 import { ContaCorrente } from './model/contaCorrente.js';
 
 let endAg = new Endereco('PE', "Recife", "São José", "Rua da Guia", 1000, 305, "40050-030");
@@ -40,6 +40,13 @@ cliOnelia.nome = "Onélia Andrade Cavalcanti";
 //console.log(cliOnelia.nome);
 // cliOnelia.setNome("Onélia Andrade Cavalcanti"); // Não fazer o set desse jeito.
 contaEgito.depositar(300.0);
+
+/*try {
+    contaEgito.sacar(500.0);
+} catch (error) {
+    console.error(error);
+}*/
+
 contaEgito.sacar(500.0);
 contaEgito.pagar(78.0);
 contaEgito.tranferir(600.0, contaOnelia);
@@ -81,3 +88,11 @@ console.log(contaDaniloPp.mostrarCliente());
 // Erro método abstract
 //console.log(contaOnelia.mostrarCliente());
 
+console.log("\n================================\n\n");
+
+let bancoSoftex = new Map();
+bancoSoftex.set(cliOnelia.cpf, contaOneliaPp);
+bancoSoftex.set(cliEgito.cpf, contaEgito);
+bancoSoftex.delete(cliEgito.cpf);
+
+console.log(bancoSoftex);
