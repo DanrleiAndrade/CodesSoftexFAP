@@ -14,3 +14,5 @@ type User = {
   
   const isJustineAnAdult: boolean = isAdult(justine);
   
+
+  let comum!: string;
