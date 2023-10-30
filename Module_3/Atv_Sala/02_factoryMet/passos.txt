@@ -1,0 +1,6 @@
+-node || npm init -y
+-typescript || npm i -D typescript
+-tsx (rodar ts sem compilar) || npm i -D tsx
+-criar tsconfig || npx tsc --init
+    colocar "include": ["src"], no tsconfig.json, acima do "compilerOptions"
+-criar gitignore || npx gitignore node
