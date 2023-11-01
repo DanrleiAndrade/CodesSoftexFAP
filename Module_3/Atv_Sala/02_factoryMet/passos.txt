@@ -4,3 +4,4 @@
 -criar tsconfig || npx tsc --init
     colocar "include": ["src"], no tsconfig.json, acima do "compilerOptions"
 -criar gitignore || npx gitignore node
+-para rodar o código || npx tsx app.ts 

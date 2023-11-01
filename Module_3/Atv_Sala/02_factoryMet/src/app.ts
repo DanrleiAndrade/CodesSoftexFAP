@@ -1,6 +1,5 @@
-//import { Servidor } from "./model/Servidor";
-//import { PC } from "./model/PC";
-
+import { Servidor } from "./model/Servidor";
+import { PC } from "./model/PC";
 import { Computador } from "./model/Computador";
 import { Fabrica } from "./model/Fabrica";
 
@@ -13,4 +12,4 @@ import { Fabrica } from "./model/Fabrica";
 
 let servidorSoftex2 = Fabrica.createComp(64, 2000, 5.0, "servidor", 20000);
 //(servidorSoftex2 as Servidor).setSO("CentOS");
-console.log(servidorSoftex2.toString());
+//console.log(servidorSoftex2.toString());
